@@ -1,0 +1,237 @@
+<html><head><title>PSP Greek Virtual Keyboard</title>
+
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+</head><body onload="frmKeypad.http.focus()" bgcolor="#e0e0e0">
+<script>
+var theurl="";
+var capslock=0;
+
+function backspacetofield(){
+theurl=theurl.substring(0,theurl.length-1)
+document.getElementById('urladdress').value=theurl;
+}
+function transfertofield(keyv){
+var tmp = keyv;
+if (capslock == 1) tmp = keyv.toUpperCase();
+theurl=theurl+tmp;
+document.getElementById('urladdress').value=theurl;
+}
+function invcapslock(){
+  if (capslock==1) capslock = 0;
+  else  capslock = 1;
+}
+</script>
+<form name="frmKeypad">
+<div style="text-align: center;"></div>
+<table align="center">
+<tbody>
+  <tr>
+    <td align="center">
+      <img src="Data/klayout.png" align="middle">
+    </td>
+  </tr>
+  <tr>
+    <td align="center">
+      <input id="urladdress" value="" size="50" type="text">
+      <input value="Clear" onclick="transfertofield(theurl='')" type="button">
+    </td>
+  </tr>
+</tbody>
+</table>
+
+<table align="center">
+<tbody>
+  <tr>
+    <td align="center">
+      <table align="center">
+      <tbody>
+        <tr>
+          <td align="center">
+            <input value=" ! " onclick="transfertofield('!')" type="button">
+            <input value=" @ " onclick="transfertofield('@')" type="button">
+            <input value=" # " onclick="transfertofield('#')" type="button">
+            <input value=" $ " onclick="transfertofield('$')" type="button">
+            <input value=" % " onclick="transfertofield('%')" type="button">
+            <input value=" ^ " onclick="transfertofield('^')" type="button">
+            <input value=" &amp; " onclick="transfertofield('&amp;')" type="button">
+            <input value=" * " onclick="transfertofield('*')" type="button">
+            <input value=" ( " onclick="transfertofield('(')" type="button">
+            <input value=" ) " onclick="transfertofield(')')" type="button">
+            <input value=" { " onclick="transfertofield('{')" type="button">
+            <input value=" } " onclick="transfertofield('}')" type="button">
+            <input value=" BS " onclick="backspacetofield()" type="button">
+          </td>
+        </tr>
+        <tr>
+          <td align="center">
+            <input value=" 1 " onclick="transfertofield('1')" type="button">
+            <input value=" 2 " onclick="transfertofield('2')" type="button">
+            <input value=" 3 " onclick="transfertofield('3')" type="button">
+            <input value=" 4 " onclick="transfertofield('4')" type="button">
+            <input value=" 5 " onclick="transfertofield('5')" type="button">
+            <input value=" 6 " onclick="transfertofield('6')" type="button">
+            <input value=" 7 " onclick="transfertofield('7')" type="button">
+            <input value=" 8 " onclick="transfertofield('8')" type="button">
+            <input value=" 9 " onclick="transfertofield('9')" type="button">
+            <input value=" 0 " onclick="transfertofield('0')" type="button">
+            <input value=" [ " onclick="transfertofield('[')" type="button">
+            <input value=" ] " onclick="transfertofield(']')" type="button">
+          </td>
+        </tr>
+        <tr>
+          <td align="center">
+            <input value=" &quot; " onclick="transfertofield('&quot;')" type="button">
+            <input value=" &lt; " onclick="transfertofield('<')" type="button">
+            <input value=" &gt; " onclick="transfertofield('>')" type="button">
+            <input value=" π " onclick="transfertofield('π')" type="button">
+            <input value=" υ " onclick="transfertofield('υ')" type="button">
+            <input value=" φ " onclick="transfertofield('φ')" type="button">
+            <input value=" γ " onclick="transfertofield('γ')" type="button">
+            <input value=" ψ " onclick="transfertofield('ψ')" type="button">
+            <input value=" ρ " onclick="transfertofield('ρ')" type="button">
+            <input value=" λ " onclick="transfertofield('λ')" type="button">
+            <input value=" ? " onclick="transfertofield('?')" type="button">
+            <input value=" + " onclick="transfertofield('+')" type="button">
+            <input value=" | " onclick="transfertofield('|')" type="button">
+          </td>
+        </tr>
+        <tr>
+          <td align="center">
+            <input value=" / " onclick="transfertofield('/')" type="button">
+            <input value=" ' " onclick="transfertofield(&quot;'&quot;)" type="button">
+            <input value=" , " onclick="transfertofield(',')" type="button">
+            <input value=" α " onclick="transfertofield('α')" type="button">
+            <input value=" o " onclick="transfertofield('o')" type="button">
+            <input value=" ε " onclick="transfertofield('ε')" type="button">
+            <input value=" θ " onclick="transfertofield('θ')" type="button">
+            <input value=" ι " onclick="transfertofield('ι')" type="button">
+            <input value=" δ " onclick="transfertofield('δ')" type="button">
+            <input value=" η " onclick="transfertofield('η')" type="button">
+            <input value=" τ " onclick="transfertofield('τ')" type="button">
+            <input value=" ν " onclick="transfertofield('ν')" type="button">
+            <input value=" σ " onclick="transfertofield('σ')" type="button">
+            <input value=" = " onclick="transfertofield('=')" type="button">
+            <input value=" \ " onclick='transfertofield("\\")' type="button">
+
+          </td>
+        </tr>
+        <tr>
+          <td align="center">
+            <input value=" . " onclick="transfertofield('.')" type="button">
+            <input value=" : " onclick="transfertofield(':')" type="button">
+            <input value=" ; " onclick="transfertofield(';')" type="button">
+            <input value=" ; " onclick="transfertofield(';')" type="button">
+            <input value=" ξ " onclick="transfertofield('ξ')" type="button">
+            <input value=" κ " onclick="transfertofield('κ')" type="button">
+            <input value=" χ " onclick="transfertofield('χ')" type="button">
+            <input value=" β " onclick="transfertofield('β')" type="button">
+            <input value=" μ " onclick="transfertofield('μ')" type="button">
+            <input value=" ς " onclick="transfertofield('ς')" type="button">
+            <input value=" ω " onclick="transfertofield('ω')" type="button">
+            <input value=" ζ " onclick="transfertofield('ζ')" type="button">
+            <input value=" - " onclick="transfertofield('-')" type="button">
+            <input value=" _ " onclick="transfertofield('_')" type="button">
+            <input value=" ~ " onclick="transfertofield('~')" type="button">
+
+          </td>
+        </tr>
+        <tr>
+          <td align="center">
+            <input value=" CAPS " onclick="invcapslock()" type="button">
+            <input value="                     Space                     " onclick="transfertofield(' ')" type="button">
+
+          </td>
+        </tr>
+        <tr>
+          <td align="center">
+            <input value="http://" onclick="transfertofield('http://')" type="button">
+            <input value="https://" onclick="transfertofield('https://')" type="button">
+			<input value="www." onclick="transfertofield('www.')" type="button">
+			<input value=".com" onclick="transfertofield('.com')" type="button">
+            <input value=".net" onclick="transfertofield('.net')" type="button">
+            <input value=".html" onclick="transfertofield('.html')" type="button">
+            <input value=".htm" onclick="transfertofield('.htm')" type="button">
+            <input value=".gr" onclick="transfertofield('.gr')" type="button">
+			<input value=".com.cy" onclick="transfertofield('.com.cy')" type="button">
+         </td>
+        </tr>
+        <tr>
+          <td align="center">
+             <input value="file:/psp/" onclick="transfertofield('file:/psp/')" type="button">
+             <input value="file:/" onclick="transfertofield('file:/')" type="button">
+			 <input value="mass0:/" onclick="transfertofield('mass0:/')" type="button">
+			 <input value="mass1:/" onclick="transfertofield('mass1:/')" type="button">
+			 <input value="mc0:/" onclick="transfertofield('mc0:/')" type="button">
+			 <input value="mc1:/" onclick="transfertofield('mc1:/')" type="button">
+			 <input value="index.html" onclick="transfertofield('index.html')" type="button">
+             <input value="index.htm" onclick="transfertofield('index.htm')" type="button">
+             <input type="button" onclick="alert('Credits: LibTiff | Bases on ZX-81's source')" value="Credits">
+
+          </td>
+        </tr>
+      </tbody>
+      </table>
+    </td>
+    <td align="center">
+
+      <table align="center">
+      <tbody>
+        <tr>
+          <td align="center">
+            <input value=" / " onclick="transfertofield('/')" type="button">
+            <input value=" * " onclick="transfertofield('*')" type="button">
+            <input value=" - " onclick="transfertofield('-')" type="button">
+            <input value=" + " onclick="transfertofield('+')" type="button">
+          </td>
+        </tr>
+        <tr>
+          <td align="center">
+            <input value=" 7 " onclick="transfertofield('7')" type="button">
+            <input value=" 8 " onclick="transfertofield('8')" type="button">
+            <input value=" 9 " onclick="transfertofield('9')" type="button">
+          </td>
+        </tr>
+        <tr>
+          <td align="center">
+            <input value=" 4 " onclick="transfertofield('4')" type="button">
+            <input value=" 5 " onclick="transfertofield('5')" type="button">
+            <input value=" 6 " onclick="transfertofield('6')" type="button">
+          </td>
+        </tr>
+        <tr>
+          <td align="center">
+            <input value=" 1 " onclick="transfertofield('1')" type="button">
+            <input value=" 2 " onclick="transfertofield('2')" type="button">
+            <input value=" 3 " onclick="transfertofield('3')" type="button">
+          </td>
+        </tr>
+        <tr>
+          <td align="center">
+            <input value=" 0 " onclick="transfertofield('0')" type="button">
+            <input value=" . " onclick="transfertofield('.')" type="button">
+            <input value=" 00 " onclick="transfertofield('00')" type="button">
+          </td>
+        </tr>
+        <tr>
+          <td align="center">
+            <input value="Google" onclick="window.location='http://www.google.com/search?q='+theurl" type="button">
+          </td>
+        </tr>
+        <tr>
+          <td align="center">
+            <input value="GO" onclick="window.location=(theurl)" type="button">
+          </td>
+        </tr>
+      </tbody>
+      </table>
+    </td>
+  </tr>
+</tbody>
+</table>
+
+</form>
+
+<br>
+<br>
+
+</body></html>
